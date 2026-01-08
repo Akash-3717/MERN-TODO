@@ -7,7 +7,7 @@ const express = require('express');
 const Mongoose = require('mongoose')
 //Local Module
 
-const errorController = require('./controller/errorController');
+const errorController = require('./controller/errorcontroller');
 const ItemRouter = require('./router/ItemRouter');
 const cors = require('cors');
 const mongoose = require('mongoose');
