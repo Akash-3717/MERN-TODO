@@ -21,7 +21,10 @@ const Mongo_Db_Url = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONG
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: ['https://695f600a55e0b46f947d109d--stellar-gaufre-7fe209.netlify.app', 'http://localhost:5173'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(ItemRouter)
 app.use(errorController.get404)
