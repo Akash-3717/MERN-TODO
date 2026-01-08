@@ -1,0 +1,14 @@
+[build]
+  base = "Frontend"
+  command = "npm run build"
+  publish = "dist"
+
+# Optional: define env vars here or in Netlify UI
+#[build.environment]
+#  VITE_API_URL = "https://your-render-backend-url"
+
+# SPA fallback (alternative to _redirects file)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
